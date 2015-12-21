@@ -1,0 +1,154 @@
+@BorderColor: lighten(black, 20%);
+
+html {
+  font-size: 62.5%;
+}
+
+.navbar {
+  background-image: url('../img/menu.jpg');
+  background-size: cover;
+  background-size: top left;
+  background-repeat: no-repeat;
+  border-radius: none;
+  border: none;
+  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0;
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background-color: rgba(235, 214, 185, 0.8);  
+  }
+  .nav li a {
+    color: black;
+    font-size: 1.8rem;
+    border-right: 1px solid @BorderColor;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.nav li:first-child {
+    a {border-left: 1px solid @BorderColor;}
+}
+
+.carousel {
+  border-top: 2px solid @BorderColor;
+  border-bottom: 2px solid @BorderColor;
+}
+
+.carousel-inner {
+  .item {
+    img {
+      max-height: 40rem;
+      width: 100%;
+    }
+  }
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
+  font-size: 4rem;
+}
+
+.carousel-control {
+  width: 10%;
+}
+
+// .fill {
+// 	height: 70vh;
+//   background-image: url('../img/interior.jpg');
+//   &:after {
+//     position: absolute;
+//     top:0;
+//     left:0;
+//     background-color: rgba(255, 255, 255, 0.5);
+//     width: 100%;
+//     height: 70vh;
+//   }
+// }
+
+// .offer {
+//   position: relative;
+// 	.offerSlider:first-child {
+// 		border-right: 1px solid red;
+// 	}
+// 	.offerSlider:last-child {
+// 		border-left: 1px solid red;
+// 	}
+//   .offertCenter {
+//     position: relative;
+//   }
+//   .offerTitle {
+//     position: absolute;
+//     z-index: 1;
+//     color: black;
+//     width: 300px;
+//     padding: 30px 0;
+//     top: 8%;
+//     left: 50%;
+//     margin: -50px 0 0 -150px;
+//     background-color: rgba(255, 255, 255, 0.8)
+//   }
+// }
+
+// .offerSlider {
+// 	margin: 0;
+// 	padding: 0;
+// }
+
+.contactForm {
+  margin-top: 3.5rem;
+  label {
+    display: block;
+    /* ustawiamy by label rozpoczynał się od nowej linii*/
+    margin-bottom: 5px;
+    /* dodajemy margines dolny */
+    font-weight: bold;
+    /* pogrubiamy czcionkę */
+    text-transform: uppercase;
+    /* zamieniamy wszystkie litery na duże */
+    font-size: 1.5rem;
+    /* ustawiamy wielkość czcionki */
+    color: black;
+    /* ustawiamy kolor czcionki */
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+.contactForm textarea {
+  height: 10rem;
+  width: 100%;
+  border: 2px solid #ccc;
+  /* padding-bottom: 15px; */
+}
+.contactForm input {
+  padding: 5px;
+  /* dodajemy margines wewnątrz naszego pola */
+  border-radius: 3px;
+  /* dodajemy zaokraglone rogi */
+  border: 2px solid #ccc;
+  /* dodajemy obramowanie */
+  margin-bottom: 1.5rem;
+  /* dodajemy margines dolny */
+  width: 100%;
+  /* ustalamy szerokość */
+  font-family: 'Slabo 27px', serif;
+  font-size: 1.6rem;
+
+}
+.contactForm input#submit {
+  width: 100%;
+  /* ustalamy szerokość */
+  cursor: pointer;
+  /* zmieniamy kursor */
+  margin-bottom: 40px;
+  /* resetujemy margines dolny */
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  font-family: 'Slabo 27px', serif;
+  font-weight: bold;
+}
+

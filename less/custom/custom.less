@@ -1,127 +1,369 @@
 @BorderColor: lighten(black, 20%);
+@borderColorQucikContact: lighten(blue, 35%);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:500&subset=latin-ext);
 
 html {
   font-size: 62.5%;
 }
 
+p {
+  font-size: 1.6rem;
+}
+
+
+.top {
+
+}
+
+.topLogo {
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
 .navbar {
-  background-image: url('../img/menu.jpg');
+  background: url('../img/osb1.jpg');
   background-size: cover;
-  background-size: top left;
-  background-repeat: no-repeat;
-  border-radius: none;
+  border-radius: 0;
   border: none;
   position: relative;
-  padding-top: 0.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0;
+  margin-bottom: 2rem;
   padding-bottom: 0.5rem;
   margin-bottom: 0;
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 60px;
-    width: 100%;
-    background-color: rgba(235, 214, 185, 0.8);  
+}
+  .container-fluid {
+    padding-right: 0;
   }
+  .nav {
+    padding-bottom: 0;
+    // background-color: rgba(128, 0, 0, 1);
+    margin-right: 6.5%;
+  }
+
   .nav li a {
-    color: black;
-    font-size: 1.8rem;
-    border-right: 1px solid @BorderColor;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    color: black !important;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 0.1rem;
   }
-}
 
-.nav li:first-child {
-    a {border-left: 1px solid @BorderColor;}
-}
 
-.carousel {
+
+
+
+.topCarousel {
   border-top: 2px solid @BorderColor;
   border-bottom: 2px solid @BorderColor;
 }
 
-.carousel-inner {
+.topCarousel {
   .item {
     img {
       max-height: 40rem;
       width: 100%;
+      opacity: 0.7;
     }
+  }
+}
+
+@-webkit-keyframes topcarouselcontentani {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+} 
+
+.topCarouselContent {
+  background-color: rgba(255, 255, 255, .5);
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  height: 24rem;
+  margin: 0 auto;
+  margin-bottom: 12%;
+  // width: 52rem;
+  color: lighten(black, 15%);
+  text-shadow: none;
+  p:first-child{
+    padding-top: 1rem;
+    opacity: 0;
+    animation: 1s 1 topcarouselcontentani linear forwards;
+    animation-delay: 0.5s;
+    -webkit-animation: 1s 1 topcarouselcontentani linear forwards;
+    -webkit-animation-delay: 0.5s;
+  }
+  p:nth-child(2) {
+    padding-bottom: 1rem;
+    animation: 1.5s 1 topcarouselcontentani linear forwards;
+    animation-delay: 1s;
+    -webkit-animation: 1s 1 topcarouselcontentani linear forwards;
+    -webkit-animation-delay: 1s;
+    opacity: 0;
+    // margin-bottom: 
+  }
+  p {
+    padding: 0; 
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 3.5rem !important;
+  }
+  .btn {
+    -webkit-border-radius: 60;
+    -moz-border-radius: 60;
+    border-radius: 6rem;
+    color: #000;
+    font-size: 2rem;
+    padding: .8rem 3.5rem .8rem 3.5rem;
+    border: solid #1f628d 2px;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: 1s 1 topcarouselcontentani linear forwards;
+    animation-delay: 1.5s;
+    -webkit-animation: 1s 1 topcarouselcontentani linear forwards;
+    -webkit-animation-delay: 1.5s;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    transition: all .5s linear;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    transition: all .5s linear;
+    }
+}
+
+.topCarouselContentTwo {
+  background-color: rgba(250, 250, 250, 0.1);
+  position: absolute;
+  height: 28rem;
+  width: 60%;
+  top: 10%;
+  left: 10%;
+  text-align: left;
+  text-shadow: none;
+  color: darken(blue, 50%);
+  font-family: 'Lato', sans-serif;
+  p {
+    font-size:3rem;
+    padding-left: 2rem;
+  }
+  li {
+    padding-left: 2rem;
+    font-size: 2.5rem;
   }
 }
 
 .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
   font-size: 4rem;
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .carousel-control {
+  background-image: none;
   width: 10%;
 }
 
-// .fill {
-// 	height: 70vh;
-//   background-image: url('../img/interior.jpg');
-//   &:after {
-//     position: absolute;
-//     top:0;
-//     left:0;
-//     background-color: rgba(255, 255, 255, 0.5);
-//     width: 100%;
-//     height: 70vh;
-//   }
-// }
+.carousel-indicators li, .carousel-indicators .active {
+  border-radius: 0px;
+  height: 2rem;
+  width: 2rem;
+}
 
-// .offer {
-//   position: relative;
-// 	.offerSlider:first-child {
-// 		border-right: 1px solid red;
-// 	}
-// 	.offerSlider:last-child {
-// 		border-left: 1px solid red;
-// 	}
-//   .offertCenter {
-//     position: relative;
-//   }
-//   .offerTitle {
-//     position: absolute;
-//     z-index: 1;
-//     color: black;
-//     width: 300px;
-//     padding: 30px 0;
-//     top: 8%;
-//     left: 50%;
-//     margin: -50px 0 0 -150px;
-//     background-color: rgba(255, 255, 255, 0.8)
-//   }
-// }
+.offer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: lighten(gray, 38%);
+  .offerContentMargin {
+    border-top: 1px solid lighten(gray, 42%);
+    padding-top: 2rem;
+    margin-top: 3rem;
+  }
+  .offerContent {
+    h2 {
+      padding-top: 0;
+      margin-top: 0;
+      font-size: 2.2rem;
+    }
 
-// .offerSlider {
-// 	margin: 0;
-// 	padding: 0;
-// }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.serviceImgContent, .serviceImgContentTwo {
+  position: relative;
+  background: url(../img/livingroom.jpg);
+  background-size: cover;
+  opacity: 1;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,1);
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,1);
+  position: relative;
+  -webkit-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  -ms-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  transition: all .5s linear;
+  &:hover {
+    opacity: .8;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    transition: all .5s linear;
+    p {
+      opacity: 1;
+      color: black;
+      position: absolute;
+    }
+  }
+   p {
+    margin: 0 auto;
+    opacity: 0;
+    position: absolute;
+    font-size: 3rem;
+    top:40%;
+    left:25%;
+    font-weight: bold;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    transition: all .5s linear;
+    }
+}
+
+.serviceImgContentTwo {
+  background: url(../img/office.jpg);
+  background-size: cover;
+}
+
+
+.services {
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f9fe+0,d6f0fd+100;White+3D+%232 */
+background: rgb(242,249,254); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(242,249,254,1) 0%, rgba(214,240,253,1) 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(242,249,254,1) 0%,rgba(214,240,253,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  rgba(242,249,254,1) 0%,rgba(214,240,253,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f9fe', endColorstr='#d6f0fd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+  padding-bottom: 4rem;
+  padding-top: 2rem;
+  .servicesImg {
+    opacity: 0;
+  }
+  .servicesContent {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    &:first-child {
+      border-right: .1rem solid gray;
+    }
+    p {
+      margin-top: 2rem;
+    }  
+  }
+}
+
+.quality {
+  background: url('../img/painter1.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 2px solid @BorderColor;
+  border-bottom: 2px solid @BorderColor;
+  .qualityContent {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 4rem;
+    &:last-child {
+      margin-bottom: 4rem;
+    }
+    .fa {
+      padding-top: 2rem;
+    }
+    h3 {
+      margin-bottom: 2rem;
+    }
+    p {
+      padding-bottom: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}
+
+.footerAddress {
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f9fe+0,d6f0fd+100;White+3D+%232 */
+  background: rgb(242,249,254); /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(242,249,254,1) 0%, rgba(214,240,253,1) 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(242,249,254,1) 0%,rgba(214,240,253,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center,  rgba(242,249,254,1) 0%,rgba(214,240,253,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f9fe', endColorstr='#d6f0fd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  .footerAddressData {
+    address {
+      h4 {
+        font-size: 2.0rem;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+      }
+      p {
+        .fa {
+          margin-right: 0.5rem;
+        }
+        margin: 0;
+        margin-bottom: 0.3rem;
+        padding: 0;
+        &:nth-child(4) {
+          margin-bottom: 2rem;
+        } 
+      }
+    }
+  }
+}
 
 .contactForm {
-  margin-top: 3.5rem;
-  label {
-    display: block;
-    /* ustawiamy by label rozpoczynał się od nowej linii*/
-    margin-bottom: 5px;
-    /* dodajemy margines dolny */
-    font-weight: bold;
-    /* pogrubiamy czcionkę */
+  h4 {
+    font-size: 2rem;
     text-transform: uppercase;
-    /* zamieniamy wszystkie litery na duże */
-    font-size: 1.5rem;
-    /* ustawiamy wielkość czcionki */
-    color: black;
-    /* ustawiamy kolor czcionki */
-    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 3rem;
   }
 }
 .contactForm textarea {
-  height: 10rem;
+  height: 5rem;
   width: 100%;
-  border: 2px solid #ccc;
+  border: 2px solid @borderColorQucikContact;
+  font-weight: bold;
   /* padding-bottom: 15px; */
 }
 .contactForm input {
@@ -129,7 +371,7 @@ html {
   /* dodajemy margines wewnątrz naszego pola */
   border-radius: 3px;
   /* dodajemy zaokraglone rogi */
-  border: 2px solid #ccc;
+  border: 2px solid @borderColorQucikContact;
   /* dodajemy obramowanie */
   margin-bottom: 1.5rem;
   /* dodajemy margines dolny */
@@ -137,11 +379,14 @@ html {
   /* ustalamy szerokość */
   font-family: 'Slabo 27px', serif;
   font-size: 1.6rem;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.8)
 
 }
 .contactForm input#submit {
   width: 100%;
   /* ustalamy szerokość */
+  background-color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
   /* zmieniamy kursor */
   margin-bottom: 40px;
